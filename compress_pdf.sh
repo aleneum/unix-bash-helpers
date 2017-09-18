@@ -8,6 +8,12 @@
 # -dPDFSETTINGS=/printer selects output similar to the Acrobat Distiller "Print Optimized" setting
 # -dPDFSETTINGS=/default selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
 
+if [ $# -ne "1" ]
+then
+	echo USAGE: compress_pdf.sh INPUT_FILE
+	exit 1
+fi
+
 quality=$2
 options="-sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dNOPAUSE -dQUIET -dBATCH"
 quality=${quality:-printer}
