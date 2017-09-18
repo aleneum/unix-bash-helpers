@@ -8,9 +8,11 @@
 # -dPDFSETTINGS=/printer selects output similar to the Acrobat Distiller "Print Optimized" setting
 # -dPDFSETTINGS=/default selects output intended to be useful across a wide variety of uses, possibly at the expense of a larger output file
 
-if [ $# -ne "1" ]
+if [ $# -eq "0" ]
 then
-	echo USAGE: compress_pdf.sh INPUT_FILE
+	echo USAGE: compress_pdf.sh INPUT_FILE <PDFSETTINGS>
+  echo Returns a pdf file named INPUT_FILE_compressed.pdf
+  echo Default PDFSETTINGS is 'printer'
 	exit 1
 fi
 
