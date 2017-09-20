@@ -10,10 +10,10 @@
 
 if [ $# -eq "0" ]
 then
-	echo USAGE: compress_pdf.sh INPUT_FILE <PDFSETTINGS>
+  echo USAGE: compress_pdf.sh INPUT_FILE [PDFSETTINGS]
   echo Returns a pdf file named INPUT_FILE_compressed.pdf
   echo Default PDFSETTINGS is 'printer'
-	exit 1
+  exit 1
 fi
 
 quality=$2
